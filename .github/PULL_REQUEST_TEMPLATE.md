@@ -19,11 +19,25 @@
 - [ ] Breaks a thing
 - [ ] Breaks another thing
 
-### Minor fixes and improvements
+### Minor improvements
 
 - [ ] Closes #pqr An annoying bug
 - [ ] Closes #stu A tweak
 
+### Fixes
+
+- [ ] Fixes something
+- [ ] Fixes another thing
+
+### Testing
+
+- [ ] Updates a test
+- [ ] Makes test more efficient
+
+### Devops
+
+- [ ] A devops thing
+- [ ] Another devops thing
 
 ## Quality Checklist
 
