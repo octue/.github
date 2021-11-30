@@ -1,4 +1,4 @@
-name: File Sync
+name: Synchronise Workflows
 
 # Synchronise both when a file is changed in this repo, and daily to avoid anything getting out of sync
 # in the child repositories
@@ -18,9 +18,11 @@ jobs:
       - name: Sync Workflows
         uses: adrianjost/files-sync-action@v1.0.1
         with:
-          FILE_PATTERNS: |
-            ^.github/workflows/sync-.*
-          TARGET_REPOS: |
+          SRC_ROOT: /synced-workflows/
+          TARGET_ROOT: /.github/workflows/
+          FILE_PATTERNS: |-
+            ^synced-workflows/synced-.*
+          TARGET_REPOS: |-
             octue/amy
             octue/amy-fibres
             octue/amy-ui
