@@ -17,14 +17,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Sync Workflows
         uses: adrianjost/files-sync-action@v1.0.1
-          with:
-            FILE_PATTERNS: |
-              ^.github/workflows/sync-.*
-            TARGET_REPOS: |
-              octue/amy
-              octue/amy-fibres
-              octue/amy-ui
-              octue/octue-sdk-python
-              octue/planex-site
-              octue/twined
-            GITHUB_TOKEN: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN }}
+        with:
+          FILE_PATTERNS: |
+            ^.github/workflows/sync-.*
+          TARGET_REPOS: |
+            octue/amy
+            octue/amy-fibres
+            octue/amy-ui
+            octue/octue-sdk-python
+            octue/planex-site
+            octue/twined
+          GITHUB_TOKEN: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN }}
