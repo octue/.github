@@ -21,7 +21,7 @@ jobs:
           SRC_ROOT: /synced-workflows/
           TARGET_ROOT: /.github/workflows/
           FILE_PATTERNS: |-
-            ^synced-workflows/synced-.*
+            ^synced-add-issues-to-octue-board\.yml$
           TARGET_REPOS: |-
             octue/amy
             octue/amy-fibres
