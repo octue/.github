@@ -18,10 +18,11 @@ jobs:
       - name: Sync Workflows
         uses: adrianjost/files-sync-action@master
         with:
+          COMMIT_MESSAGE: "OPS: Update workflow from octue/.github skipci"
           SRC_ROOT: /synced-workflows/
           TARGET_ROOT: /.github/workflows/
           FILE_PATTERNS: |-
-            ^synced-add-issues-to-octue-board\.yml$
+            ^synced-add-issues-to-octue-board\.yaml$
           TARGET_REPOS: |-
             octue/amy
             octue/amy-fibres
