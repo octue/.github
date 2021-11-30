@@ -16,7 +16,7 @@ jobs:
       - name: Fetch Local Repository
         uses: actions/checkout@v2
       - name: Sync Workflows
-        uses: adrianjost/files-sync-action@v1.0.1
+        uses: adrianjost/files-sync-action@master
         with:
           SRC_ROOT: /synced-workflows/
           TARGET_ROOT: /.github/workflows/
