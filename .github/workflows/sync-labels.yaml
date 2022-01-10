@@ -1,0 +1,24 @@
+name: Sync labels
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - labels.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: micnncim/action-label-syncer@v1
+        with:
+          manifest: labels.yml
+          repository: |
+              octue/amy
+              octue/amy-fibres
+              octue/octue-sdk-python
+              octue/twined
+              octue/django-twined
+              octue/planex-site
+          token: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN }}
