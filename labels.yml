@@ -1,0 +1,60 @@
+- name: backend
+  description: Related to the back end
+  color: f4699e
+- name: branding
+  description: Inconsistent or no branding issues
+  color: e8d610
+- name: bug
+  description: Unintended behaviour in any area of the app
+  color: fc2929
+- name: decision needed
+  description: A decision is required (e.g. on UX or company policy)
+  color: fbca04
+- name: dependencies
+  description: Pull requests that update a dependency file
+  color: 0366d6
+- name: design (UI)
+  description: Related to visual design
+  color: ed5e76
+- name: developer experience (DX)
+  description: Improves our lives/efficiency as developers
+  color: dea5ba
+- name: devops
+  description: System admin and devops
+  color: c95a38
+- name: documentation
+  description: Improvements or additions to documentation
+  color: 0075ca
+- name: duplicate
+  description: This issue or pull request already exists
+  color: cfd3d7
+- name: experience (UX)
+  description: Key UX issues
+  color: 3e4abc
+- name: feature
+  description: A new feature of the app
+  color: 84b6eb
+- name: frontend
+  description: Related to the front end
+  color: 59e5c4
+- name: good first issue
+  description: A good first issue for new or junior developers
+  color: 7de819
+- name: help wanted
+  description: Applied by the assigned developer if they need help
+  color: 159818
+- name: performance
+  description: If you want to run cool, you've got to run on heavy, heavy fuel
+  color: 4d4d4d
+- name: quirk
+  description: Quirky UX or styling problems that aren't major but reflect poorly on us
+  color: c4bef7
+- name: science
+  description: Actual engineering computation or analytics
+  color: bcff96
+- name: security
+  description: A security-related feature
+  color: d93f0b
+- name: tech-debt
+  description: Technical debt (tidy up, refactoring, restructuring, caused by laziness now)
+  color: ea8c11
