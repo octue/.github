@@ -15,10 +15,26 @@ jobs:
         with:
           manifest: labels.yml
           repository: |
+              octue/.github
               octue/amy
-              octue/amy-fibres
-              octue/octue-sdk-python
-              octue/twined
+              octue/automan
+              octue/conventional-commits
               octue/django-twined
+              octue/django-dag-cte
+              octue/django-gcp
+              octue/es-flow
+              octue/example-service-cloud-run
+              octue/hex
+              octue/how-tos
+              octue/octue-gcp
+              octue/octue-sdk-python
+              octue/octue-sdk-cpp
+              octue/openfast-docker
               octue/planex-site
+              octue/strands
+              octue/timper
+              octue/twined
+              octue/yuriy-foil
+              octue/tpast
+              
           token: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN }}
