@@ -1,3 +1,6 @@
+- name: application idea
+  description: Idea for an application to be created/wrapped for octue
+  color: d93f0b
 - name: backend
   description: Related to the back end
   color: f4699e
@@ -7,6 +10,24 @@
 - name: bug
   description: Unintended behaviour in any area of the app
   color: fc2929
+- name: company funding
+  description: Related to company funding
+  color: fbca04
+- name: company marketing
+  description: Related to company marketing (see also `content`)
+  color: e102d8
+- name: company processes
+  description: Related to company processes
+  color: dfccff
+- name: company sales
+  description: Related to company sales
+  color: d7e102
+- name: company strategy
+  description: Related to company strategy
+  color: 65f2ab
+- name: content
+  description: Related to website or marketing content
+  color: #006b75
 - name: decision needed
   description: A decision is required (e.g. on UX or company policy)
   color: fbca04
@@ -28,15 +49,21 @@
 - name: duplicate
   description: This issue or pull request already exists
   color: cfd3d7
+- name: ecosystem
+  description: Related to schema or app ecosystem development
+  color: 17c5e0
 - name: epic
   description: Contains links to a collection of issues
-  color: #cc00ff
+  color: cc00ff
 - name: experience (UX)
   description: Key UX issues
   color: 3e4abc
 - name: feature
   description: A new feature of the app
   color: 84b6eb
+- name: framework
+  description: Octue app or twined framework and communications system
+  color: 65f2ab
 - name: frontend
   description: Related to the front end
   color: 59e5c4
@@ -49,15 +76,27 @@
 - name: performance
   description: If you want to run cool, you've got to run on heavy, heavy fuel
   color: 4d4d4d
+- name: question
+  description: Further information is requested
+  color: d876e3
 - name: quirk
   description: Quirky UX or styling problems that aren't major but reflect poorly on us
   color: c4bef7
+- name: rolling-task
+  description: Rolling tasks don't close, we just periodically check in with them
+  color: 3ac49f
 - name: science
   description: Actual engineering computation or analytics
   color: bcff96
 - name: security
   description: A security-related feature
   color: d93f0b
+- name: strategy
+  description: Long term technology strategy
+  color: 65f2ab
 - name: tech-debt
   description: Technical debt (tidy up, refactoring, restructuring, caused by laziness now)
   color: ea8c11
+- name: test
+  description: Implement or update unit tests
+  color: c0e55b
