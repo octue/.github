@@ -1,3 +1,6 @@
+- name: actions
+  description: Creating or updating github actions
+  color: fcba03
 - name: application idea
   description: Idea for an application to be created/wrapped for octue
   color: d93f0b
