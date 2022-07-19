@@ -7,7 +7,7 @@ about: Create an epic from a set of issues. Octue maintainers only - not for pub
 
 ## End User Goal
 
-<!--- A succinct two sentences, at a high (non-technical) level. How will this support Octue's -->
+<!--- A succinct two sentences, at a high (non-technical) level. How will this support Octue's mission to help scientists work more effectively with data? Think: facilitating a key commercial milestone, or enabling a significant/strategic featureset to improve user capability.-->
 
 ## Overview
 
