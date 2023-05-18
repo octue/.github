@@ -19,17 +19,27 @@ jobs:
           repository: |
               octue/.github
               octue/amy
+              octue/autotag
               octue/automan
+              octue/bladed-reader
               octue/conventional-commits
+              octue/check-semantic-version
+              octue/create-push-subscription
+              octue/generate-pull-request-description
               octue/django-twined
               octue/django-dag-cte
               octue/django-gcp
               octue/es-flow
+              octue/exa
+              octue/exa-foo-fighting-service
               octue/example-service-cloud-run
+              octue/get-deployment-info
               octue/hex
               octue/how-tos
+              octue/meeting-time
               octue/octue-gcp
               octue/octue-sdk-python
+              octue/octue-sdk-python-version-compatibility
               octue/octue-sdk-cpp
               octue/openfast-docker
               octue/planex-site
