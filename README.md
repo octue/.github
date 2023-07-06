@@ -1,3 +1,8 @@
+# Octue GitHub Settings
+
+Welcome to Octue! This repository defines settings and workflows that are applied universally across all Octue 
+repositories.
+
 # Octue python standards
 
 ### One-line if/else statements
