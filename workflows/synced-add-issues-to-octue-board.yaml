@@ -4,6 +4,7 @@
 name: synced-add-issues-to-octue-board
 
 on:
+  workflow_call:
   issues:
     types: [opened, reopened, transferred]
 
