@@ -5,6 +5,10 @@ name: synced-add-issues-to-octue-board
 
 on:
   workflow_call:
+    secrets:
+      github-token:
+        required: true
+
   issues:
     types: [opened, reopened, transferred]
 
@@ -16,4 +20,4 @@ jobs:
         uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/orgs/octue/projects/22
-          github-token: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN_2 }}
+          github-token: ${{ secrets.github-token }}
