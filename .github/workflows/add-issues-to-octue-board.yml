@@ -6,6 +6,6 @@ on:
 
 jobs:
   add-issues-to-octue-board:
-    uses: ./.github/workflows/reusable-add-issues-to-octue-board.yaml
+    uses: ./.github/workflows/reusable-add-issues-to-octue-board.yml
     secrets:
-      github-token: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN_2 }}
+      github-token: ${{ secrets.PROJECT_ISSUES_TOKEN }}
