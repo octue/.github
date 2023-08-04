@@ -26,9 +26,10 @@ jobs:
               octue/check-semantic-version
               octue/create-push-subscription
               octue/generate-pull-request-description
-              octue/django-twined
               octue/django-dag-cte
               octue/django-gcp
+              octue/django-revolve
+              octue/django-twined
               octue/es-flow
               octue/exa
               octue/exa-foo-fighting-service
