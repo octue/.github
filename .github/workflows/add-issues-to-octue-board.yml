@@ -1,0 +1,11 @@
+name: add-issues-to-octue-board
+
+on:
+  issues:
+    types: [opened, reopened, transferred]
+
+jobs:
+  add-issues-to-octue-board:
+    uses: ./.github/workflows/reusable-add-issues-to-octue-board.yml
+    secrets:
+      github-token: ${{ secrets.PROJECT_ISSUES_TOKEN }}

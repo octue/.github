@@ -1,0 +1,53 @@
+name: Sync labels
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - labels.yml
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: micnncim/action-label-syncer@v1
+        with:
+          manifest: labels.yml
+          prune: true
+          repository: |
+              octue/.github
+              octue/amy
+              octue/autotag
+              octue/automan
+              octue/bladed-reader
+              octue/conventional-commits
+              octue/check-semantic-version
+              octue/create-push-subscription
+              octue/generate-pull-request-description
+              octue/django-dag-cte
+              octue/django-gcp
+              octue/django-revolve
+              octue/django-twined
+              octue/es-flow
+              octue/exa
+              octue/exa-foo-fighting-service
+              octue/example-service-cloud-run
+              octue/get-deployment-info
+              octue/hex
+              octue/how-tos
+              octue/meeting-time
+              octue/octue-gcp
+              octue/octue-sdk-python
+              octue/octue-sdk-python-version-compatibility
+              octue/octue-sdk-cpp
+              octue/openfast-docker
+              octue/planex-site
+              octue/strands
+              octue/timper
+              octue/twined
+              octue/yuriy-foil
+              octue/tpast
+              
+          token: ${{ secrets.PROJECT_AUTOMATION_GITHUB_TOKEN }}
