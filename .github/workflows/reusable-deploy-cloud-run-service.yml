@@ -110,10 +110,6 @@ jobs:
       - name: Configure Docker for GCP
         run: gcloud auth configure-docker ${{ needs.info.outputs.gcp_region }}-docker.pkg.dev
 
-      - name: Setup tmate session [DEBUG]
-        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled == 'true'}}
-        uses: mxschmitt/action-tmate@v3
-
       - name: Get dockerfile
         run: wget ${{ inputs.dockerfile_url }}
 
