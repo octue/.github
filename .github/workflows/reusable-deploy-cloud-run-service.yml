@@ -37,6 +37,10 @@ on:
         type: string
         required: false
         default: ''
+      cloud-run-flags:
+        type: string
+        required: false
+        default: '--ingress=all --allow-unauthenticated'
 
 
 jobs:
@@ -157,7 +161,7 @@ jobs:
           region: ${{ needs.info.outputs.gcp_region }}
           tag: v${{ needs.info.outputs.version_slug }}
           timeout: 3600
-          flags: "--ingress=all --allow-unauthenticated"
+          flags: "${{ inputs.cloud-run-flags }}"
 
       - name: Show deployed service URL
         run: echo "${{ steps.deploy-service.outputs.url }}"
