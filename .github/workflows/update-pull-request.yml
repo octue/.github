@@ -1,0 +1,10 @@
+name: update-pull-request
+
+on:
+  pull_request:
+
+jobs:
+  description:
+    uses: ./.github/workflows/reusable-update-pull-request.yml
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
