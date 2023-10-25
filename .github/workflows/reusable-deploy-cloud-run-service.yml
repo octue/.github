@@ -150,14 +150,14 @@ jobs:
           env_vars: |
             OCTUE_SERVICE_NAMESPACE=${{ needs.info.outputs.gcp_resource_affix }}
             OCTUE_SERVICE_NAME=${{ needs.info.outputs.gcp_service_name }}
-            OCTUE_SERVICE_REVISION_TAG=${{ needs.info.outputs.version_slug }}
+            OCTUE_SERVICE_REVISION_TAG=${{ needs.info.outputs.version }}
             COMPUTE_PROVIDER=GOOGLE_CLOUD_RUN
           service: ${{ needs.info.outputs.gcp_resource_affix }}-${{ needs.info.outputs.gcp_service_name }}
           image: ${{ needs.info.outputs.image_version_artifact }}
           region: ${{ needs.info.outputs.gcp_region }}
           tag: v${{ needs.info.outputs.version_slug }}
           timeout: 3600
-          flags: "--ingress=all --allow-unauthenticated --cpu=4 --memory=16Gi --concurrency=5 --max-instances=10"
+          flags: "--ingress=all --allow-unauthenticated"
 
       - name: Show deployed service URL
         run: echo "${{ steps.deploy-service.outputs.url }}"
