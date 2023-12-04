@@ -53,20 +53,15 @@ jobs:
       contents: read
 
     outputs:
-      branch_tag_kebab: ${{ steps.get-deployment-info.outputs.branch_tag_kebab }}
-      branch_tag_screaming: ${{ steps.get-deployment-info.outputs.branch_tag_screaming}}
-      image_latest_artifact: ${{ steps.get-deployment-info.outputs.image_latest_artefact}}
-      image_latest_tag: ${{ steps.get-deployment-info.outputs.image_latest_tag }}
-      image_version_artifact: ${{ steps.get-deployment-info.outputs.image_version_artefact}}
-      image_version_tag: ${{ steps.get-deployment-info.outputs.image_version_tag }}
-      short_sha: ${{ steps.get-deployment-info.outputs.short_sha }}
+      image_latest_artifact: ${{ steps.get-deployment-info.outputs.image_latest_artifact}}
+      image_version_artifact: ${{ steps.get-deployment-info.outputs.image_version_artifact}}
       gcp_project_name: ${{ steps.get-deployment-info.outputs.gcp_project_name}}
       gcp_project_number: ${{ steps.get-deployment-info.outputs.gcp_project_number}}
       gcp_region: ${{ steps.get-deployment-info.outputs.gcp_region}}
       gcp_resource_affix: ${{ steps.get-deployment-info.outputs.gcp_resource_affix}}
       gcp_service_name: ${{ steps.get-deployment-info.outputs.gcp_service_name}}
-      version: ${{ steps.get-deployment-info.outputs.version }}
-      version_slug: ${{ steps.get-deployment-info.outputs.version_slug }}
+      revision_tag: ${{ steps.get-deployment-info.outputs.revision_tag }}
+      revision_tag_slug: ${{ steps.get-deployment-info.outputs.revision_tag_slug }}
 
     steps:
       - name: Checkout
@@ -77,7 +72,7 @@ jobs:
 
       - name: Get deployment info
         id: get-deployment-info
-        uses: octue/get-deployment-info@0.1.3
+        uses: octue/get-deployment-info@0.2.0
         with:
           gcp_project_name: ${{ inputs.gcp_project_name }}
           gcp_project_number: ${{ inputs.gcp_project_number }}
@@ -107,7 +102,7 @@ jobs:
 
       - name: Authenticate with GCP Workload Identity
         id: auth
-        uses: google-github-actions/auth@v0
+        uses: google-github-actions/auth@v2
         with:
           # NOTE: If setting create_credentials_file=true, .dockerignore file must include `gha-creds-*.json` to avoid baking these credentials into build
           create_credentials_file: true
@@ -154,12 +149,12 @@ jobs:
           env_vars: |
             OCTUE_SERVICE_NAMESPACE=${{ needs.info.outputs.gcp_resource_affix }}
             OCTUE_SERVICE_NAME=${{ needs.info.outputs.gcp_service_name }}
-            OCTUE_SERVICE_REVISION_TAG=${{ needs.info.outputs.version }}
+            OCTUE_SERVICE_REVISION_TAG=${{ needs.info.outputs.revision_tag }}
             COMPUTE_PROVIDER=GOOGLE_CLOUD_RUN
           service: ${{ needs.info.outputs.gcp_resource_affix }}-${{ needs.info.outputs.gcp_service_name }}
           image: ${{ needs.info.outputs.image_version_artifact }}
           region: ${{ needs.info.outputs.gcp_region }}
-          tag: v${{ needs.info.outputs.version_slug }}
+          tag: v${{ needs.info.outputs.revision_tag_slug }}
           timeout: 3600
           flags: "${{ inputs.cloud_run_flags }}"
 
@@ -172,7 +167,7 @@ jobs:
           project_name: ${{ needs.info.outputs.gcp_project_name }}
           service_namespace: ${{ needs.info.outputs.gcp_resource_affix }}
           service_name: ${{ needs.info.outputs.gcp_service_name }}
-          service_revision_tag: ${{ needs.info.outputs.version_slug }}
+          service_revision_tag: ${{ needs.info.outputs.revision_tag }}
           push_endpoint: ${{ steps.deploy-service.outputs.url }}
 
       - name: Register service revision
@@ -181,6 +176,6 @@ jobs:
         with:
           service_namespace: ${{ needs.info.outputs.gcp_resource_affix }}
           service_name: ${{ needs.info.outputs.gcp_service_name }}
-          service_revision_tag: ${{ needs.info.outputs.version }}
+          service_revision_tag: ${{ needs.info.outputs.revision_tag }}
           is_default: "false"
           service_registry_endpoint: https://api.windquest.app/integrations/octue/services
