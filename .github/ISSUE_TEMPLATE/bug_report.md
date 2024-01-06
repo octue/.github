@@ -39,3 +39,12 @@ Please give as much detail as you can, like:
 ### Proposed Solution
 
 Please describe, if you can, how you think the bug should be fixed or problem solved.
+
+
+### Supporting Octue
+
+Octue is an Open-Source Software organisation helping you and many others to fight climate change. Providing support for your issues costs us c. 500GBP/day. Might your organisation be in a position to help sponsor this issue?
+- [ ] We already are (eg via technical partnership or GitHub Sponsors )
+- [ ] Yes (we'll prioritise this issue, and be in touch)
+- [ ] No (we'll work on this issue as and when it aligns with our core development activity)
+
