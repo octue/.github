@@ -7,7 +7,7 @@ about: Report a bug
 
 ### About me
 
-If you're new to the twined ecosystem, and you don't mind, it'd be great to hear a little bit of the wider context about
+If you're new to the octue ecosystem, and you don't mind, it'd be great to hear a little bit of the wider context about
 you and what you're working on, so we can understand how best to help.
 
 
@@ -34,3 +34,8 @@ Please give as much detail as you can, like:
 - [ ] related issues
 - [ ] suggestions how to fix
 - [ ] links for us to have context, eg. stackoverflow, gitter, etc
+
+
+### Proposed Solution
+
+Please describe, if you can, how you think the bug should be fixed or problem solved.
