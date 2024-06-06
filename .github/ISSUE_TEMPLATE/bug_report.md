@@ -1,6 +1,7 @@
 ---
 name: Bug report
 about: Report a bug
+labels: bug
 ---
 
 ## Bug report
@@ -47,4 +48,3 @@ Octue is an Open-Source Software organisation helping you and many others to fig
 - [ ] We already are (eg via technical partnership or GitHub Sponsors )
 - [ ] Yes (we'll prioritise this issue, and be in touch)
 - [ ] No (we'll work on this issue as and when it aligns with our core development activity)
-
