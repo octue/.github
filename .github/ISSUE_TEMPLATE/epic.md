@@ -1,6 +1,7 @@
 ---
 name: Epic
 about: Create an epic from a set of issues. Octue maintainers only - not for public use!!!!!
+labels: epic
 ---
 
 # Epic

@@ -1,6 +1,7 @@
 ---
 name: Feature request
 about: Request a feature
+labels: feature
 ---
 
 ## Feature request
@@ -31,4 +32,3 @@ Octue is an Open-Source Software organisation helping you and many others to fig
 - [ ] We already are (eg via technical partnership or GitHub Sponsors )
 - [ ] Yes (we'll prioritise this issue, and be in touch)
 - [ ] No (we'll work on this issue as and when it aligns with our core development activity)
-
