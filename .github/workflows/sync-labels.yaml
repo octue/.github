@@ -32,16 +32,22 @@ jobs:
         repo: ${{ fromJson(needs.get-repos.outputs.repos) }}
       fail-fast: false      
     steps:
+      - name: Display matrix.repo information
+        run: |
+          echo "Archived: ${{ !matrix.repo.archived }}"
+          echo "Repo: ${{ !matrix.repo.full_name }}"
+          
       - name: Checkout .github repo (containing labels.yml)
         if: ${{ !matrix.repo.archived }} # Make sure repo is not archived
         uses: actions/checkout@v3
-        
+
       - name: Sync labels (skip archived)
         if: ${{ !matrix.repo.archived }} # Make sure repo is not archived
         uses: brpaz/action-label-syncer@0.2.0
         with:
           manifest: labels.yml
           prune: true
-          repository: ${{ !matrix.repo.full_name }}
-              
+          repository: |
+            ${{ matrix.repo.full_name }}
+
           token: ${{ secrets.LABEL_SYNC_TOKEN }}
