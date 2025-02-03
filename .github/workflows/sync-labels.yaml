@@ -42,7 +42,6 @@ jobs:
         with:
           manifest: labels.yml
           prune: true
-          repository: |
-              ${{ !matrix.repo.full_name }}
+          repository: ${{ !matrix.repo.full_name }}
               
           token: ${{ secrets.LABEL_SYNC_TOKEN }}
