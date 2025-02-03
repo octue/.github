@@ -21,6 +21,8 @@ jobs:
       - name: Get repository list
         id: get-repos
         uses: raven-actions/get-repos@v1
+        with: 
+          github-token: ${{ secrets.LABEL_SYNC_TOKEN_GITHUB }}
           
   sync-repo-labels:
     name: Sync ${{ matrix.repo.name }} labels
