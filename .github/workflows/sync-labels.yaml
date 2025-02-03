@@ -22,7 +22,7 @@ jobs:
         id: get-repos
         uses: raven-actions/get-repos@v1
         with: 
-          github-token: ${{ secrets.LABEL_SYNC_TOKEN_GITHUB }}
+          github-token: ${{ secrets.LABEL_SYNC_TOKEN }}
           
   sync-repo-labels:
     name: Sync ${{ matrix.repo.name }} labels
