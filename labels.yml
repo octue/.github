@@ -9,7 +9,7 @@
   color: fc2929
 - name: content
   description: Related to website or marketing content
-  color: #006b75
+  color: 006b75
 - name: decision needed
   description: A decision is required (e.g. on UX or company policy)
   color: fbca04
